@@ -55,8 +55,18 @@ See `README.md` for the full list.
 
 ## Notes
 
-- Member logos in `public/logos/members/` were extracted from the official
-  infographic: background flood-filled to transparency, chamfered corners masked,
-  then quantised to 128 colours (1.3 MB → 313 KB).
-- The `neo-group` logo is icon-only in the source artwork; it was identified
-  from the members word-cloud in the project deck.
+- Member logos in `public/logos/members/` are sourced by quality, not convenience.
+  The infographic PDF is only 150 DPI (it is a stack of full-page layers), so
+  logos cut from it look grainy. Order of preference, and what `build_logos` did:
+  1. a real brand asset from `next-summit-valletta/public/logos` (6 logos);
+  2. the project deck's members word-cloud artwork, ~3x the infographic's pixels
+     (19 logos) — the logos there overlap, so the crop boxes are hand-set;
+  3. the infographic, only for Aviatrix (the word cloud has a washed-out metallic
+     variant) and Bragg (its wordmark runs off the word-cloud artboard).
+  Backgrounds are removed by a border-connected flood fill, which keeps whites
+  enclosed by a logo, then edge-touching stray blobs are dropped.
+- The `neo-group` logo is icon-only in the infographic; it was identified from
+  the members word-cloud in the project deck.
+- The hero photo is the HR Connect session at NEXT Summit Valletta, reused from
+  `next-summit-valletta/public/images/hr-connect.jpg` and cropped above the
+  burned-in sponsor bar (which starts at y=1429 in that file).

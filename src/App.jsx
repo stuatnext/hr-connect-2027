@@ -335,7 +335,6 @@ const NAV = [
   ['Membership', 'membership'],
   ['New for 2027', 'new-2027'],
   ['Programme', 'programme'],
-  ['Members', 'members'],
 ]
 
 function Nav() {
@@ -419,10 +418,10 @@ function Hero() {
         <div
           className="h-full w-full"
           style={{
-            clipPath: 'polygon(28% 0, 100% 0, 100% 100%, 0 100%, 0 62%)',
-            backgroundImage: `url(${base}images/crowd-portrait.jpg)`,
+            clipPath: 'polygon(54% 0, 100% 0, 100% 100%, 0 100%, 0 58%)',
+            backgroundImage: `url(${base}images/hr-connect-session.jpg)`,
             backgroundSize: 'cover',
-            backgroundPosition: '52% 42%',
+            backgroundPosition: '50% 26%',
           }}
         />
       </div>
@@ -834,37 +833,31 @@ function Programme() {
 function Members() {
   const doubled = useMemo(() => [...MEMBERS, ...MEMBERS], [])
   return (
-    <section id="members" className="overflow-hidden bg-hrc-sand py-20 sm:py-28">
+    <section id="members" className="overflow-hidden border-b border-hrc-ink/8 bg-hrc-sand py-12 sm:py-14">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <SectionHead
-          eyebrow="Our proud members"
-          title="The companies already in the room."
-          lead="Operators, suppliers, studios, affiliates and the regulator — the People teams shaping
-                iGaming in Malta."
-        />
-      </div>
-
-      <div className="relative mt-14">
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r
-                        from-hrc-sand to-transparent sm:w-28" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l
-                        from-hrc-sand to-transparent sm:w-28" />
-        <div className="flex w-max marquee-track">
-          {doubled.map(([slug, name], i) => (
-            <div key={`${slug}-${i}`}
-                 className="mx-2 flex h-24 w-44 shrink-0 items-center justify-center rounded-xl bg-white px-6
-                            ring-1 ring-hrc-ink/6 sm:mx-2.5 sm:h-28 sm:w-52">
-              <img src={`${base}logos/members/${slug}.png`} alt={name} decoding="async"
-                   className="max-h-11 w-auto max-w-full object-contain" />
-            </div>
-          ))}
+        <div className="animate-on-scroll flex flex-wrap items-baseline gap-x-4 gap-y-1" data-anim>
+          <Eyebrow>Our proud members</Eyebrow>
+          <p className="text-[13.5px] text-hrc-ink/55">
+            {MEMBERS.length} companies — operators, suppliers, studios, affiliates and the regulator.
+          </p>
         </div>
       </div>
 
-      <div className="mx-auto mt-12 max-w-7xl px-5 sm:px-8">
-        <p className="animate-on-scroll text-[13px] text-hrc-ink/45" data-anim>
-          {MEMBERS.length} member companies as at the 2026 member roll.
-        </p>
+      <div className="relative mt-8">
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-14 bg-gradient-to-r
+                        from-hrc-sand to-transparent sm:w-24" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-14 bg-gradient-to-l
+                        from-hrc-sand to-transparent sm:w-24" />
+        <div className="flex w-max marquee-track">
+          {doubled.map(([slug, name], i) => (
+            <div key={`${slug}-${i}`}
+                 className="mx-2 flex h-20 w-40 shrink-0 items-center justify-center rounded-xl bg-white px-5
+                            ring-1 ring-hrc-ink/6 sm:mx-2.5 sm:h-22 sm:w-48">
+              <img src={`${base}logos/members/${slug}.png`} alt={name} decoding="async"
+                   className="max-h-9 w-auto max-w-full object-contain" />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
@@ -971,13 +964,13 @@ export default function App() {
       <Nav />
       <main>
         <Hero />
+        <Members />
         <About />
         <Audience />
         <Benefits />
         <Membership />
         <New2027 />
         <Programme />
-        <Members />
         <Testimonials />
         <Join />
       </main>

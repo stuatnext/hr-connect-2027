@@ -19,13 +19,13 @@ npm run deploy   # build + publish to gh-pages
 | Section | Content |
 | --- | --- |
 | Hero | Positioning, mission, proof stats |
+| Members | The 27-company logo wall, directly beneath the hero |
 | What is HR Connect | Mission statement + three pillars |
 | Who it's for | Who / Sector / Where |
 | What you get | The seven membership deliverables |
 | Membership | Four fee bands by Malta headcount, with an interactive fee finder |
 | New for 2027 | Member introductions, peer exchange, expert panels, poker tournament |
 | Programme | The 2027 member calendar |
-| Members | The 27-company member wall |
 | What they say | Six attributed member testimonials |
 
 ## Branding
@@ -50,7 +50,13 @@ Brand assets in `public/logos/`:
   so the colour is baked in).
 - `hrconnect-mark.svg` / the inline `<Mark>` component — the four-piece brand mark,
   traced from the infographic. Inline, so it *does* follow `currentColor`.
-- `members/*.png` — 27 member logos, background-removed and quantised.
+- `members/*.png` — 27 member logos. The infographic PDF is a stack of full-page
+  layers at 150 DPI, so logos cut from it are soft. These come from better sources
+  instead: real brand assets reused from `next-summit-valletta` where one exists
+  (6), and the project deck's members word-cloud artwork for the rest (19), which
+  carries roughly 3x the pixels of the infographic. Only Aviatrix and Bragg still
+  come from the infographic — the word cloud has a washed-out metallic Aviatrix
+  variant, and its Bragg wordmark runs off the artboard.
 
 ## Source material
 
