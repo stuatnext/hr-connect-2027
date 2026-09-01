@@ -606,7 +606,7 @@ function Membership() {
           eyebrow="Membership"
           title="The size of your Malta organisation sets your fee."
           lead="Annual company membership. Four bands, published pricing, no negotiation needed —
-                find your band below."
+                find your band below. Membership is priced on organisation size - benefits reach your whole Malta team."
         />
 
         {/* fee finder */}
