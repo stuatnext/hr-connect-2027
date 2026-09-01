@@ -164,7 +164,6 @@ const TIERS = [
 ]
 
 const TIER_INCLUDES = [
-  'Free NEXT Summit Valletta passes',
   'Monthly online Zoom sessions',
   'Pulse surveys & benchmarking',
   'Access to experienced HR mentors',
@@ -698,6 +697,10 @@ function Membership() {
                   <li className="flex gap-2.5 text-[13.5px] font-bold text-hrc-ink/85">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-hrc-green" strokeWidth={3} />
                     {t.reps} representatives
+                  </li>
+                  <li className="flex gap-2.5 text-[13.5px] leading-snug text-hrc-ink/65">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-hrc-green/45" strokeWidth={3} />
+                    {t.reps} free NEXT Summit Valletta passes
                   </li>
                   {TIER_INCLUDES.map((inc) => (
                     <li key={inc} className="flex gap-2.5 text-[13.5px] leading-snug text-hrc-ink/65">
