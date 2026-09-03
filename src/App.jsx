@@ -66,11 +66,11 @@ function Lockup({ className = 'h-9' }) {
 
 const MISSION =
   'HR Connect is your only HR community for iGaming professionals across all People departments. ' +
-  'Supported by GamingMalta, we exist to aid developing easy access to benchmarking, valuable ' +
-  'business insights amongst loyal industry colleagues and friends.'
+  'Supported by GamingMalta, we exist to give HR professionals easy access to benchmarking, ' +
+  'valuable business insights and a trusted network of loyal industry colleagues and friends.'
 
 const STATS = [
-  { value: '27',      label: 'Member companies',      note: 'operators, suppliers, studios & affiliates' },
+  { value: '27',      label: 'Member companies',      note: 'operators, suppliers, studios, affiliates & the regulator' },
   { value: '9.0/10',  label: 'Member satisfaction',   note: '2026 member survey' },
   { value: '2,100+',  label: 'HR professionals',      note: 'following the community on LinkedIn' },
   { value: '12',      label: 'Sessions a year',       note: 'monthly, plus three in-person events' },
